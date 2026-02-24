@@ -12,6 +12,7 @@ export default {
 
 <style scoped>
 .footer {
-  /* tes styles */
+  display: flex;
+  justify-content: center;
 }
 </style>

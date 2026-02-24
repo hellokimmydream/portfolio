@@ -67,18 +67,32 @@ export default {
 
 <style scoped>
 .module-item {
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
+  margin-bottom: 25px;
 }
 .module-header {
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
 }
 .module-content {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease-in-out;
 }
 .module-item.open .module-content {
-  display: block;
+  max-height: 800px;
+}
+.arrow {
+  transition: transform 0.3s ease;
+  font-size: 22px;
+}
+.module-item.open .arrow {
+  transform: rotate(90deg);
+}
+
+.modules-list.ul.li {
+  list-style: none;
 }
 </style>

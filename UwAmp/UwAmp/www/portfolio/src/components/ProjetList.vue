@@ -83,25 +83,57 @@ export default {
 </script>
 
 <style scoped>
-/* Reprendre styles des cartes projets et détail */
 .projets-wrapper {
-  display: flex;
-  gap: 20px;
+  margin-right: 30px;
 }
 .projets-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
 }
 .projet-card {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 12px;
   cursor: pointer;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projet-card:hover {
+  transform: translateY(-5px);
+  background: #e0e0e0;
+}
+.projet-title {
+  font-weight: 600;
+  font-size: 16px;
 }
 .projet-detail {
-  margin-top: 20px;
-  border-top: 1px solid #ccc;
-  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.projet-detail-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.projet-detail.open .projet-detail-content {
+  max-height: auto;
+}
+.competences-list {
+  margin-top: 10px;
+  list-style: none;
+}
+.competences-list li {
+  margin-bottom: 5px;
+  background: #eee;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 14px;
 }
 </style>

@@ -1,85 +1,112 @@
 <template>
-  <div class="page">
-    <div class="page-title-block">
-      <h1>Cours de théorie suivis & résultats obtenus</h1>
-      <div class="line"></div>
-    </div>
+  <div class="list-matieres">
+    <div v-for="matiere in matieres" :key="matiere.nom" class="matiere">
+      <div class="matiere-header" @click="toggle(matiere.nom)">
+        <div class="matiere-name">{{ matiere.nom }}</div>
+        <div class="arrow" :class="{ open: matiere.open }">→</div>
+      </div>
 
-    <div class="list-matieres">
       <div
-        class="matiere"
-        v-for="matiere in matieres"
-        :key="matiere.nom_module"
+        class="matiere-content"
+        :style="{ maxHeight: matiere.open ? '800px' : '0' }"
       >
-        <div class="matiere-header" @click="toggleMatiere(matiere.nom_module)">
-          <div class="matiere-name">{{ matiere.nom_module }}</div>
-          <div class="arrow">→</div>
-        </div>
-        <div class="matiere-line"></div>
-        <div class="matiere-content" v-show="matiere.open">
-          <div class="notes-grid">
-            <div class="note-col">
-              <div
-                class="note-bar"
-                v-for="(note, idx) in matiere.notes || []"
-                :key="idx"
-              >
-                <div class="value" :style="{ width: note * 20 + '%' }"></div>
-                <div class="label">{{ note }}</div>
-              </div>
+        <div class="notes-grid">
+          <div class="note-col">
+            <div
+              class="note-bar"
+              v-for="(note, index) in matiere.notes"
+              :key="index"
+            >
+              <div class="value" :style="{ width: note * 20 + '%' }"></div>
+              <div class="label">{{ note }}</div>
             </div>
-            <div class="note-text-list">
-              <div
-                class="note-text-item"
-                v-for="(sujet, idx) in matiere.sujets || []"
-                :key="idx"
-              >
-                <b>{{ sujet.nom || "Sujet" }}</b> {{ sujet.description || "" }}
-              </div>
+          </div>
+          <div class="note-text-list">
+            <div
+              class="note-text-item"
+              v-for="(sujet, index) in matiere.sujets"
+              :key="index"
+            >
+              <b>{{ sujet }}</b>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="moyenne">
-      Moyenne obtenue <span>{{ moyenneGlobale }}</span>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "TheorieList",
-  props: {
-    matieres: { type: Array, required: true },
-  },
   data() {
-    return {};
+    return {
+      matieres: [],
+    };
   },
-  computed: {
-    moyenneGlobale() {
-      // Calcul simple : moyenne de toutes les notes
-      const toutesNotes = this.matieres.flatMap((m) => m.notes || []);
-      if (!toutesNotes.length) return 0;
-      const sum = toutesNotes.reduce((a, b) => a + b, 0);
-      return (sum / toutesNotes.length).toFixed(2);
-    },
+  mounted() {
+    fetch("/api/getMatieres.php")
+      .then((res) => res.json())
+      .then((data) => {
+        this.matieres = data.map((m) => ({ ...m, open: false }));
+      })
+      .catch((err) => console.error(err));
   },
   methods: {
-    toggleMatiere(nom) {
-      const m = this.matieres.find((m) => m.nom_module === nom);
-      if (m) m.open = !m.open;
+    toggle(nom) {
+      const mat = this.matieres.find((m) => m.nom === nom);
+      mat.open = !mat.open;
     },
   },
 };
 </script>
 
 <style scoped>
+.list-matieres {
+  margin: 30px 30px;
+}
+.matiere {
+  margin-bottom: 25px;
+}
+.matiere-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+}
 .matiere-content {
-  transition: all 0.3s;
+  overflow: hidden;
+  transition: max-height 0.45s ease-in-out;
 }
 .arrow {
-  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-size: 22px;
+}
+.arrow.open {
+  transform: rotate(90deg);
+}
+.note-col {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.note-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+.value {
+  height: 10px;
+  background: #444;
+  margin-bottom: 3px;
+  border-radius: 4px;
+}
+.label {
+  font-size: 12px;
+}
+.note-text-list {
+  margin-top: 10px;
 }
 </style>
