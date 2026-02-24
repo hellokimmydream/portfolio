@@ -1,7 +1,8 @@
-app.component("hero-section", {
+export default {
   data() {
     return { showModal: false };
   },
+
   methods: {
     openModal() {
       this.showModal = true;
@@ -10,7 +11,8 @@ app.component("hero-section", {
       this.showModal = false;
     },
   },
-  template: /*html*/ `
+
+  template: `
     <section>
       <div class="hero">
         <div class="hero-title">PORTFOLIO</div>
@@ -21,17 +23,16 @@ app.component("hero-section", {
         <div class="about-img" @click="openModal"></div>
         <div class="about-text">
           <h2>About me</h2>
-          <p>Camille Rais, étudiante informaticienne en développement d'applications.</p>
+          <p>Camille Rais, étudiante informaticienne.</p>
         </div>
       </section>
 
       <div class="modal" v-if="showModal">
         <div class="modal-content">
           <h2>Camille Rais</h2>
-          <p>Etudiante informaticienne en développement d'applications</p>
           <button @click="closeModal">Fermer</button>
         </div>
       </div>
     </section>
   `,
-});
+};

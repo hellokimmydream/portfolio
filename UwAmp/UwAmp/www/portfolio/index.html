@@ -1,48 +1,12 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8" />
-    <h1>{{ title }}</h1>
-    <link rel="stylesheet" href="./style.css" />
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <meta charset="UTF-8" />
+    <title>Portfolio Camille Rais</title>
   </head>
 
   <body>
-    <div id="app">
-      <site-header></site-header>
-
-      <hero-section v-if="currentPage === 'accueil'"></hero-section>
-
-      <projet-list
-        v-if="currentPage === 'projets'"
-        v-bind:projets="projets"
-        @select-projet="showProjetDetail"
-      >
-      </projet-list>
-
-      <theorie-lie
-        v-if="currentPage ==='theorie'"
-        v-bind:matieres="matieres"
-      ></theorie-lie>
-
-      <module-list
-        v-if="currentPage === 'modules'"
-        v-bind:modules="modules"
-      ></module-list>
-
-      <site-footer></site-footer>
-    </div>
-
-    <script src="./main.js"></script>
-    <script src="./components/Accueil.js"></script>
-    <script src="./components/Footer.js"></script>
-    <script src="./components/Header.js"></script>
-    <script src="./components/ModuleList.js"></script>
-    <script src="./components/ProjetList.js"></script>
-    <script src="./components/TheorieList.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
-
-  <script>
-    const mountApp = app.mount("#app");
-  </script>
 </html>
