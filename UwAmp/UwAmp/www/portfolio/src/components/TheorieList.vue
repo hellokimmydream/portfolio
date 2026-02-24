@@ -1,17 +1,24 @@
 <template>
-  <div class="list-matieres">
-    <div v-for="matiere in matieres" :key="matiere.nom" class="matiere">
-      <div class="matiere-header" @click="toggle(matiere.nom)">
-        <div class="matiere-name">{{ matiere.nom }}</div>
-        <div class="arrow" :class="{ open: matiere.open }">→</div>
-      </div>
+  <div class="page">
+    <div class="page-title-block">
+      <h1>Cours de théorie suivis & résultats</h1>
+      <div class="line"></div>
+    </div>
 
+    <div class="list-matieres">
       <div
-        class="matiere-content"
-        :style="{ maxHeight: matiere.open ? '800px' : '0' }"
+        v-for="matiere in matieres"
+        :key="matiere.nom"
+        class="matiere"
+        :class="{ open: matiere.open }"
       >
-        <div class="notes-grid">
-          <div class="note-col">
+        <div class="matiere-header" @click="toggle(matiere.nom)">
+          <div class="matiere-name">{{ matiere.nom }}</div>
+          <div class="arrow">→</div>
+        </div>
+
+        <div class="matiere-content">
+          <div class="notes-grid">
             <div
               class="note-bar"
               v-for="(note, index) in matiere.notes"
@@ -21,15 +28,12 @@
               <div class="label">{{ note }}</div>
             </div>
           </div>
-          <div class="note-text-list">
-            <div
-              class="note-text-item"
-              v-for="(sujet, index) in matiere.sujets"
-              :key="index"
-            >
-              <b>{{ sujet }}</b>
-            </div>
-          </div>
+
+          <ul>
+            <li v-for="(sujet, index) in matiere.sujets" :key="index">
+              {{ sujet }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -38,13 +42,14 @@
 
 <script>
 export default {
+  name: "TheorieList",
   data() {
     return {
       matieres: [],
     };
   },
   mounted() {
-    fetch("/api/getMatieres.php")
+    fetch("http://localhost/portfolio/api/getMatieres.php")
       .then((res) => res.json())
       .then((data) => {
         this.matieres = data.map((m) => ({ ...m, open: false }));
@@ -54,7 +59,7 @@ export default {
   methods: {
     toggle(nom) {
       const mat = this.matieres.find((m) => m.nom === nom);
-      mat.open = !mat.open;
+      if (mat) mat.open = !mat.open;
     },
   },
 };
@@ -64,9 +69,11 @@ export default {
 .list-matieres {
   margin: 30px 30px;
 }
+
 .matiere {
   margin-bottom: 25px;
 }
+
 .matiere-header {
   display: flex;
   justify-content: space-between;
@@ -74,39 +81,70 @@ export default {
   cursor: pointer;
   font-size: 18px;
 }
-.matiere-content {
-  overflow: hidden;
-  transition: max-height 0.45s ease-in-out;
+
+.matiere-name {
+  font-size: 14px;
+  font-weight: 500;
 }
+
 .arrow {
   transition: transform 0.3s ease;
   font-size: 22px;
 }
-.arrow.open {
+
+.matiere.open .arrow {
   transform: rotate(90deg);
 }
-.note-col {
+
+.matiere-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease-in-out;
+  margin-top: 10px;
+}
+
+.matiere.open .matiere-content {
+  max-height: 800px;
+}
+
+.notes-grid {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 10px;
+  margin-bottom: 15px;
 }
+
 .note-bar {
+  background: #f5f5f5;
+  border-radius: 6px;
+  width: 20px;
+  position: relative;
   display: flex;
+  align-items: flex-end;
+  justify-content: center;
   flex-direction: column;
-  align-items: center;
-  margin-right: 10px;
+  padding: 2px;
 }
+
 .value {
-  height: 10px;
-  background: #444;
-  margin-bottom: 3px;
-  border-radius: 4px;
+  background: #b5b0ad;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px 6px 0 0;
 }
+
 .label {
   font-size: 12px;
+  text-align: center;
+  margin-top: 2px;
 }
-.note-text-list {
-  margin-top: 10px;
+
+ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+li {
+  margin-bottom: 5px;
+  font-size: 14px;
 }
 </style>
