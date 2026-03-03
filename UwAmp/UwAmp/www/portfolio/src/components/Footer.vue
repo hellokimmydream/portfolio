@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <p>© 2026 Camille Rais - Portfolio</p>
+    <p>© Camille Rais - Portfolio - Projet personel</p>
   </footer>
 </template>
 
@@ -14,5 +14,6 @@ export default {
 .footer {
   display: flex;
   justify-content: center;
+  font-size: 10px !important;
 }
 </style>

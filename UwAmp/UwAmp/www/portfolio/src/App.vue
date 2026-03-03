@@ -1,21 +1,26 @@
 <template>
-  <site-header @change-page="goTo"></site-header>
+  <div id="app">
+    <!-- Header -->
+    <site-header @change-page="goTo"></site-header>
 
-  <hero-section v-if="currentPage === 'accueil'"></hero-section>
-  <projet-list
-    v-if="currentPage === 'projets'"
-    :projets="projets"
-  ></projet-list>
-  <theorie-list
-    v-if="currentPage === 'theorie'"
-    :matieres="modules"
-  ></theorie-list>
-  <module-list
-    v-if="currentPage === 'modules'"
-    :modules="modules"
-  ></module-list>
+    <!-- Pages dynamiques -->
+    <hero-section v-if="currentPage === 'accueil'"></hero-section>
 
-  <site-footer></site-footer>
+    <projet-list v-if="currentPage === 'projets'"></projet-list>
+
+    <theorie-list
+      v-if="currentPage === 'theorie'"
+      :matieres="modules"
+    ></theorie-list>
+
+    <module-list
+      v-if="currentPage === 'modules'"
+      :modules="modules"
+    ></module-list>
+
+    <!-- Footer -->
+    <site-footer></site-footer>
+  </div>
 </template>
 
 <script>
@@ -38,19 +43,12 @@ export default {
   },
   data() {
     return {
-      currentPage: "accueil",
+      currentPage: "accueil", // page affichée par défaut
       modules: [
         { nom: "Mathématique", notes: [], sujets: [] },
         { nom: "Anglais", notes: [], sujets: [] },
       ],
-      projets: [
-        {
-          id: 1,
-          nom: "Projet 1",
-          description: "Description du projet",
-          resultat: [],
-        },
-      ],
+      // plus besoin de projets ici, ProjetList gère le fetch interne
     };
   },
   methods: {
@@ -60,3 +58,19 @@ export default {
   },
 };
 </script>
+
+<style>
+/* Reset minimal et styles généraux */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+</style>

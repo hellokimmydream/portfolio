@@ -1,8 +1,9 @@
 <template>
   <section>
-    <div class="hero">
-      <div class="hero-title">PORTFOLIO</div>
-      <button @click="openModal">En savoir plus →</button>
+    <div class="hero" :style="{ backgroundImage: `url(${accueilImage})` }">
+      <div class="hero-overlay">
+        <div class="hero-title">PORTFOLIO</div>
+      </div>
     </div>
 
     <section class="about">
@@ -23,49 +24,55 @@
 </template>
 
 <script>
+import accueilImage from "../assets/accueil_image.jpg";
 export default {
   name: "HeroSection",
   data() {
-    return { showModal: false };
-  },
-  methods: {
-    openModal() {
-      this.showModal = true;
-    },
-    closeModal() {
-      this.showModal = false;
-    },
+    return {
+      showModal: false,
+      accueilImage,
+    };
   },
 };
 </script>
 
 <style scoped>
 .hero {
-  margin: 25px 30px 0 30px;
-  border: 1px solid #ccc;
-  height: 280px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #f5f5f5, #e9e9e9);
+  height: 45vh;
+  margin: 0;
+  border-radius: 0;
   position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.hero-title {
-  font-size: 34px;
-  font-weight: 700;
-}
-.hero button {
+/* Couche sombre transparente */
+.hero-overlay {
   position: absolute;
-  bottom: 25px;
-  background: #b5b0ad;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 6px;
-  color: #222;
-  transition: 0.3s ease;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* Titre mieux intégré */
+.hero-title {
+  color: white;
+  font-size: clamp(2rem, 6vw, 5rem);
+  font-weight: 800;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  text-align: center;
+  backdrop-filter: blur(9px);
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
 .hero button:hover {
   background: #9c9793;
   transform: translateY(-3px);

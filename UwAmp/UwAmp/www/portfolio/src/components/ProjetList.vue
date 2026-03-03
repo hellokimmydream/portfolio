@@ -1,56 +1,39 @@
 <template>
   <div class="page">
+    <!-- Bloc titre et barre toujours affiché -->
     <div class="page-title-block">
       <h1>Projets</h1>
       <p>Découvrez tous mes projets récents avec détails et compétences.</p>
       <div class="line"></div>
     </div>
 
-    <div class="projets-wrapper">
-      <!-- Grille de projets -->
-      <div class="projets-grid">
-        <div
-          v-for="p in projets"
-          :key="p.projet_id"
-          class="projet-card"
-          @click="selectProjet(p)"
-        >
-          <div class="projet-title">{{ p.nom_projet }}</div>
-          <div class="projet-module">{{ p.module_nom || "" }}</div>
+    <!-- Liste des projets -->
+    <div class="projets-list">
+      <div v-for="p in projets" :key="p.projet_id" class="projet-row">
+        <!-- Bloc gauche (skills) -->
+        <div class="projet-left">
+          <div class="skills-mock">
+            <span v-for="s in skills[p.projet_id] || []" :key="s">
+              {{ s }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Lettre centrale -->
+        <div class="projet-letter">
+          {{ p.nom_projet.charAt(0) }}
+        </div>
+
+        <!-- Bloc droite -->
+        <div class="projet-right">
+          <h3>{{ p.nom_projet }}</h3>
+          <p>{{ p.description }}</p>
         </div>
       </div>
 
-      <!-- Détail du projet -->
-      <div class="projet-detail" v-if="projetSelectionne">
-        <div class="projet-detail-header">
-          <h2>{{ projetSelectionne.nom_projet }}</h2>
-        </div>
-        <div class="matiere-line"></div>
-        <div class="projet-detail-content">
-          <p>{{ projetSelectionne.description }}</p>
-          <p>
-            Professeur : {{ projetSelectionne.professeur_nom || "Non défini" }}
-          </p>
-          <p>Module : {{ projetSelectionne.module_nom || "Non défini" }}</p>
-          <p>
-            Résultat :
-            <span v-if="resultats[projetSelectionne.projet_id]">
-              {{ resultats[projetSelectionne.projet_id].resultat }}
-              ({{
-                resultats[projetSelectionne.projet_id].pourcentage_resultat
-              }}%) le
-              {{ resultats[projetSelectionne.projet_id].date_evaluation }}
-            </span>
-            <span v-else>Pas encore évalué</span>
-          </p>
-
-          <h3>Compétences</h3>
-          <ul class="competences-list">
-            <li v-for="s in skills[projetSelectionne.projet_id] || []" :key="s">
-              {{ s }}
-            </li>
-          </ul>
-        </div>
+      <!-- Message si aucun projet -->
+      <div v-if="projets.length === 0" class="no-projets">
+        Aucun projet à afficher pour le moment.
       </div>
     </div>
   </div>
@@ -59,81 +42,84 @@
 <script>
 export default {
   name: "ProjetList",
-  props: {
-    projets: { type: Array, required: true },
-    skills: { type: Object, default: () => ({}) },
-    resultats: { type: Object, default: () => ({}) },
-  },
   data() {
     return {
-      projetSelectionne: null,
+      projets: [],
+      skills: {},
     };
   },
-  methods: {
-    selectProjet(projet) {
-      this.projetSelectionne = projet;
-      // Scroll vers le détail
-      this.$nextTick(() => {
-        const el = this.$el.querySelector(".projet-detail");
-        el?.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-    },
+  mounted() {
+    fetch("http://localhost/portfolio/api/getProjets.php")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Données reçues :", data);
+        this.projets = data.projets || [];
+        this.skills = data.skills || {};
+      })
+      .catch((err) => console.error("Erreur fetch :", err));
   },
 };
 </script>
 
 <style scoped>
-.projets-wrapper {
-  margin-right: 30px;
+.projets-list {
+  margin-top: 40px;
 }
-.projets-grid {
+
+.projet-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
-}
-.projet-card {
-  background: #f5f5f5;
-  padding: 20px;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  display: flex;
-  justify-content: space-between;
+  grid-template-columns: 200px 120px 1fr;
   align-items: center;
+  gap: 40px;
+  padding: 60px 0;
+  border-bottom: 1px solid #ccc;
 }
-.projet-card:hover {
-  transform: translateY(-5px);
-  background: #e0e0e0;
+
+/* Bloc gauche */
+.projet-left {
+  position: relative;
 }
-.projet-title {
-  font-weight: 600;
-  font-size: 16px;
-}
-.projet-detail {
+
+.skills-mock {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
-.projet-detail-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
+
+.skills-mock span {
+  background: #ddd;
+  padding: 6px 12px;
+  font-size: 12px;
 }
-.projet-detail.open .projet-detail-content {
-  max-height: auto;
+
+/* Lettre centrale */
+.projet-letter {
+  font-size: 100px;
+  font-weight: 300;
+  text-align: center;
 }
-.competences-list {
-  margin-top: 10px;
-  list-style: none;
+
+/* Bloc droite */
+.projet-right h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
-.competences-list li {
-  margin-bottom: 5px;
-  background: #eee;
-  padding: 5px 10px;
-  border-radius: 5px;
-  display: inline-block;
-  margin-right: 5px;
+
+.projet-right p {
   font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+@media (max-width: 900px) {
+  .projet-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .projet-letter {
+    font-size: 60px;
+  }
 }
 </style>
