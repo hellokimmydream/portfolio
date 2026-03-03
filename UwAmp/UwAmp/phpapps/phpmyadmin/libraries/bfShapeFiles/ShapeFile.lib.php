@@ -34,14 +34,14 @@
     return current($tmp);
   }
 
-  function swap($binValue) {
-    $result = $binValue{strlen($binValue) - 1};
-    for($i = strlen($binValue) - 2; $i >= 0 ; $i--) {
-      $result .= $binValue{$i};
+function swap($binValue) {
+    $result = $binValue[strlen($binValue) - 1]; // <-- ici on utilise []
+    for ($i = strlen($binValue) - 2; $i >= 0; $i--) {
+        $result .= $binValue[$i]; // <-- et ici aussi
     }
 
     return $result;
-  }
+}
 
   function packDouble($value, $mode = 'LE') {
     $value = (double)$value;

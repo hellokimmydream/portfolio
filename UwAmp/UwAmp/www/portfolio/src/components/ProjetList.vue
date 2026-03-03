@@ -1,41 +1,29 @@
 <template>
   <div class="page">
-    <!-- Bloc titre et barre toujours affiché -->
     <div class="page-title-block">
       <h1>Projets</h1>
-      <p>Découvrez tous mes projets récents avec détails et compétences.</p>
-      <div class="line"></div>
+      <p>Liste des projets réalisés</p>
     </div>
 
-    <!-- Liste des projets -->
-    <div class="projets-list">
-      <div v-for="p in projets" :key="p.projet_id" class="projet-row">
-        <!-- Bloc gauche (skills) -->
-        <div class="projet-left">
-          <div class="skills-mock">
-            <span v-for="s in skills[p.projet_id] || []" :key="s">
-              {{ s }}
-            </span>
-          </div>
+    <ul class="projets-list">
+      <li v-for="projet in projets" :key="projet.projet_id">
+        <div class="projet-item" @click="toggleProjet(projet)">
+          <div class="projet-name">{{ projet.nom_projet }}</div>
+          <div class="arrow">→</div>
         </div>
-
-        <!-- Lettre centrale -->
-        <div class="projet-letter">
-          {{ p.nom_projet.charAt(0) }}
+        <div class="projet-content" v-if="projet.open">
+          <p>
+            <strong>Description :</strong>
+            {{ projet.description || "Pas de description" }}
+          </p>
+          <p><strong>Date début :</strong> {{ projet.date_debut || "N/A" }}</p>
+          <p><strong>Date fin :</strong> {{ projet.date_fin || "N/A" }}</p>
+          <p>
+            <strong>Technologies :</strong> {{ projet.technologies || "N/A" }}
+          </p>
         </div>
-
-        <!-- Bloc droite -->
-        <div class="projet-right">
-          <h3>{{ p.nom_projet }}</h3>
-          <p>{{ p.description }}</p>
-        </div>
-      </div>
-
-      <!-- Message si aucun projet -->
-      <div v-if="projets.length === 0" class="no-projets">
-        Aucun projet à afficher pour le moment.
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -45,81 +33,46 @@ export default {
   data() {
     return {
       projets: [],
-      skills: {},
     };
   },
   mounted() {
-    fetch("http://localhost/portfolio/api/getProjets.php")
+    fetch("http://localhost/www/portfolio/api/getProjets.php")
       .then((res) => res.json())
-      .then((data) => {
-        console.log("Données reçues :", data);
-        this.projets = data.projets || [];
-        this.skills = data.skills || {};
-      })
-      .catch((err) => console.error("Erreur fetch :", err));
+      .then((data) => (this.projets = data.map((p) => ({ ...p, open: false }))))
+      .catch((err) => console.error(err));
+  },
+  methods: {
+    toggleProjet(projet) {
+      projet.open = !projet.open;
+    },
   },
 };
 </script>
 
 <style scoped>
 .projets-list {
-  margin-top: 40px;
+  padding-left: 0;
+  list-style: none;
 }
 
-.projet-row {
-  display: grid;
-  grid-template-columns: 200px 120px 1fr;
-  align-items: center;
-  gap: 40px;
-  padding: 60px 0;
-  border-bottom: 1px solid #ccc;
-}
-
-/* Bloc gauche */
-.projet-left {
-  position: relative;
-}
-
-.skills-mock {
+.projet-item {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  background: #f5f5f5;
+  margin-bottom: 5px;
+  border-radius: 6px;
 }
 
-.skills-mock span {
-  background: #ddd;
-  padding: 6px 12px;
-  font-size: 12px;
+.arrow {
+  transition: transform 0.3s ease;
 }
 
-/* Lettre centrale */
-.projet-letter {
-  font-size: 100px;
-  font-weight: 300;
-  text-align: center;
-}
-
-/* Bloc droite */
-.projet-right h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.projet-right p {
-  font-size: 14px;
-  color: #444;
-  line-height: 1.6;
-  max-width: 500px;
-}
-
-@media (max-width: 900px) {
-  .projet-row {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .projet-letter {
-    font-size: 60px;
-  }
+.projet-content {
+  padding: 10px;
+  border-left: 2px solid #ccc;
+  margin-bottom: 15px;
 }
 </style>

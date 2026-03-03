@@ -38,7 +38,7 @@ export default {
 
 <style scoped>
 .hero {
-  height: 45vh;
+  height: 50vh;
   margin: 0;
   border-radius: 0;
   position: relative;
@@ -68,7 +68,7 @@ export default {
   letter-spacing: 8px;
   text-transform: uppercase;
   text-align: center;
-  backdrop-filter: blur(9px);
+  backdrop-filter: blur(6px);
   padding: 20px 40px;
   border-radius: 10px;
 }

@@ -1,42 +1,22 @@
 <template>
   <div class="page">
-    <div class="page-title-block">
-      <h1>Cours de théorie suivis & résultats</h1>
-      <div class="line"></div>
-    </div>
-
-    <div class="list-matieres">
-      <div
-        v-for="matiere in matieres"
-        :key="matiere.nom"
-        class="matiere"
-        :class="{ open: matiere.open }"
-      >
-        <div class="matiere-header" @click="toggle(matiere.nom)">
-          <div class="matiere-name">{{ matiere.nom }}</div>
-          <div class="arrow">→</div>
+    <h1>Cours de théorie</h1>
+    <ul class="matieres-list">
+      <li v-for="matiere in matieres" :key="matiere.nom">
+        <div class="matiere-header" @click="toggle(matiere)">
+          <span>{{ matiere.nom }}</span>
+          <span class="arrow">→</span>
         </div>
-
-        <div class="matiere-content">
-          <div class="notes-grid">
-            <div
-              class="note-bar"
-              v-for="(note, index) in matiere.notes"
-              :key="index"
-            >
-              <div class="value" :style="{ width: note * 20 + '%' }"></div>
-              <div class="label">{{ note }}</div>
-            </div>
+        <div class="matiere-content" v-if="matiere.open">
+          <div class="notes">
+            <span v-for="(note, i) in matiere.notes" :key="i">{{ note }}</span>
           </div>
-
           <ul>
-            <li v-for="(sujet, index) in matiere.sujets" :key="index">
-              {{ sujet }}
-            </li>
+            <li v-for="(sujet, i) in matiere.sujets" :key="i">{{ sujet }}</li>
           </ul>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -49,102 +29,50 @@ export default {
     };
   },
   mounted() {
-    fetch("http://localhost/portfolio/api/getMatieres.php")
+    fetch("http://localhost/www/portfolio/api/getTheorie.php")
       .then((res) => res.json())
-      .then((data) => {
-        this.matieres = data.map((m) => ({ ...m, open: false }));
-      })
+      .then(
+        (data) => (this.matieres = data.map((m) => ({ ...m, open: false }))),
+      )
       .catch((err) => console.error(err));
   },
   methods: {
-    toggle(nom) {
-      const mat = this.matieres.find((m) => m.nom === nom);
-      if (mat) mat.open = !mat.open;
+    toggle(matiere) {
+      matiere.open = !matiere.open;
     },
   },
 };
 </script>
 
 <style scoped>
-.list-matieres {
-  margin: 30px 30px;
-}
-
-.matiere {
-  margin-bottom: 25px;
+.matieres-list {
+  list-style: none;
+  padding-left: 0;
 }
 
 .matiere-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   cursor: pointer;
-  font-size: 18px;
-}
-
-.matiere-name {
-  font-size: 14px;
-  font-weight: 500;
+  padding: 10px;
+  background: #f0f0f0;
+  margin-bottom: 5px;
+  border-radius: 6px;
 }
 
 .arrow {
   transition: transform 0.3s ease;
-  font-size: 22px;
-}
-
-.matiere.open .arrow {
-  transform: rotate(90deg);
 }
 
 .matiere-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.45s ease-in-out;
-  margin-top: 10px;
-}
-
-.matiere.open .matiere-content {
-  max-height: 800px;
-}
-
-.notes-grid {
-  display: flex;
-  gap: 10px;
+  padding: 10px;
+  border-left: 2px solid #ccc;
   margin-bottom: 15px;
 }
 
-.note-bar {
-  background: #f5f5f5;
-  border-radius: 6px;
-  width: 20px;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  flex-direction: column;
-  padding: 2px;
-}
-
-.value {
-  background: #b5b0ad;
-  width: 100%;
-  height: 100%;
-  border-radius: 6px 6px 0 0;
-}
-
-.label {
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2px;
-}
-
-ul {
-  padding-left: 20px;
-  list-style-type: disc;
-}
-
-li {
-  margin-bottom: 5px;
-  font-size: 14px;
+.notes span {
+  display: inline-block;
+  margin-right: 5px;
+  font-weight: bold;
 }
 </style>

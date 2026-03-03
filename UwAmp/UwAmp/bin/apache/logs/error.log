@@ -819,3 +819,158 @@
 [Tue Mar 03 10:02:49.891656 2026] [:error] [pid 3356:tid 1432] [client ::1:59487] PHP Notice:  Undefined variable: skillsParProjet in C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio_site\\projets.php on line 129, referer: http://localhost/portfolio_site/accueil.php
 [Tue Mar 03 10:02:49.891656 2026] [:error] [pid 3356:tid 1432] [client ::1:59487] PHP Stack trace:, referer: http://localhost/portfolio_site/accueil.php
 [Tue Mar 03 10:02:49.891656 2026] [:error] [pid 3356:tid 1432] [client ::1:59487] PHP   1. {main}() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio_site\\projets.php:0, referer: http://localhost/portfolio_site/accueil.php
+[Tue Mar 03 10:12:49.649672 2026] [mpm_winnt:notice] [pid 5116:tid 764] AH00428: Parent: child process 3356 exited with status 1 -- Restarting.
+[Tue Mar 03 10:12:50.350926 2026] [ssl:warn] [pid 5116:tid 764] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 03 10:12:50.350926 2026] [ssl:warn] [pid 5116:tid 764] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:12:50.350926 2026] [ssl:warn] [pid 5116:tid 764] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:12:50.937153 2026] [mpm_winnt:notice] [pid 5116:tid 764] AH00455: Apache/2.4.18 (Win32) OpenSSL/1.0.2f PHP/5.6.18 configured -- resuming normal operations
+[Tue Mar 03 10:12:50.937153 2026] [mpm_winnt:notice] [pid 5116:tid 764] AH00456: Server built: Jan 28 2016 09:58:25
+[Tue Mar 03 10:12:50.937153 2026] [core:notice] [pid 5116:tid 764] AH00094: Command line: 'C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\bin\\apache\\bin\\httpd.exe -d C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/bin/apache -f C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\bin\\apache\\conf\\httpd.conf'
+[Tue Mar 03 10:12:50.937153 2026] [mpm_winnt:notice] [pid 5116:tid 764] AH00418: Parent: Created child process 21704
+[Tue Mar 03 10:12:51.464037 2026] [ssl:warn] [pid 21704:tid 380] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:12:51.464037 2026] [ssl:warn] [pid 21704:tid 380] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:12:51.548303 2026] [ssl:warn] [pid 21704:tid 380] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 03 10:12:51.548303 2026] [ssl:warn] [pid 21704:tid 380] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:12:51.548303 2026] [ssl:warn] [pid 21704:tid 380] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:12:51.563901 2026] [mpm_winnt:notice] [pid 21704:tid 380] AH00354: Child: Starting 64 worker threads.
+[Tue Mar 03 10:12:52.363883 2026] [mpm_winnt:crit] [pid 21704:tid 380] AH02538: Child: Parent process exited abruptly. Child process is ending
+[Tue Mar 03 10:12:52.363883 2026] [mpm_winnt:warn] [pid 21704:tid 1500] (OS 995)L’opération d’entrée/sortie a été abandonnée en raison de l’arrêt d’un thread ou à la demande d’une application.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Mar 03 10:12:52.363883 2026] [mpm_winnt:warn] [pid 21704:tid 1496] (OS 995)L’opération d’entrée/sortie a été abandonnée en raison de l’arrêt d’un thread ou à la demande d’une application.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Mar 03 10:12:52.363883 2026] [mpm_winnt:warn] [pid 21704:tid 1492] (OS 995)L’opération d’entrée/sortie a été abandonnée en raison de l’arrêt d’un thread ou à la demande d’une application.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Mar 03 10:12:52.363883 2026] [mpm_winnt:warn] [pid 21704:tid 1488] (OS 995)L’opération d’entrée/sortie a été abandonnée en raison de l’arrêt d’un thread ou à la demande d’une application.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Mar 03 10:12:54.385852 2026] [mpm_winnt:notice] [pid 21704:tid 380] AH00364: Child: All worker threads have exited.
+[Tue Mar 03 10:14:21.285981 2026] [ssl:warn] [pid 10188:tid 724] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:14:21.285981 2026] [ssl:warn] [pid 10188:tid 724] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:14:21.317249 2026] [core:warn] [pid 10188:tid 724] AH00098: pid file C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/bin/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Mar 03 10:14:21.360554 2026] [ssl:warn] [pid 10188:tid 724] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 03 10:14:21.360554 2026] [ssl:warn] [pid 10188:tid 724] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:14:21.360554 2026] [ssl:warn] [pid 10188:tid 724] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:14:21.391803 2026] [mpm_winnt:notice] [pid 10188:tid 724] AH00455: Apache/2.4.18 (Win32) OpenSSL/1.0.2f PHP/5.6.18 configured -- resuming normal operations
+[Tue Mar 03 10:14:21.391803 2026] [mpm_winnt:notice] [pid 10188:tid 724] AH00456: Server built: Jan 28 2016 09:58:25
+[Tue Mar 03 10:14:21.391803 2026] [core:notice] [pid 10188:tid 724] AH00094: Command line: 'C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\bin\\apache\\bin\\httpd.exe -d C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/bin/apache -f C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\bin\\apache\\conf\\httpd.conf'
+[Tue Mar 03 10:14:21.391803 2026] [mpm_winnt:notice] [pid 10188:tid 724] AH00418: Parent: Created child process 16768
+[Tue Mar 03 10:14:21.895198 2026] [ssl:warn] [pid 16768:tid 644] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:14:21.895198 2026] [ssl:warn] [pid 16768:tid 644] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:14:21.971242 2026] [ssl:warn] [pid 16768:tid 644] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 03 10:14:21.971242 2026] [ssl:warn] [pid 16768:tid 644] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:14:21.971242 2026] [ssl:warn] [pid 16768:tid 644] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:14:21.988934 2026] [mpm_winnt:notice] [pid 16768:tid 644] AH00354: Child: Starting 64 worker threads.
+[Tue Mar 03 10:32:17.479945 2026] [:error] [pid 16768:tid 1448] [client ::1:60691] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getMatieres.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:32:20.362865 2026] [:error] [pid 16768:tid 1448] [client ::1:60691] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getMatieres.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:32:23.051727 2026] [:error] [pid 16768:tid 1448] [client ::1:60691] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getMatieres.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:33:51.387413 2026] [:error] [pid 16768:tid 1448] [client ::1:60718] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getMatieres.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:34:36.494954 2026] [:error] [pid 16768:tid 1448] [client ::1:60731] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getProjet.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:34:36.498947 2026] [:error] [pid 16768:tid 1448] [client ::1:60731] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getProjet.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:34:36.498947 2026] [:error] [pid 16768:tid 1428] [client ::1:60757] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getMatieres.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:34:36.939447 2026] [:error] [pid 16768:tid 1432] [client ::1:60748] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getMatieres.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:34:38.458733 2026] [:error] [pid 16768:tid 1432] [client ::1:60748] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getMatieres.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:34:59.425683 2026] [:error] [pid 16768:tid 1432] [client ::1:52048] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getMatieres.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:35:01.866368 2026] [:error] [pid 16768:tid 1432] [client ::1:52048] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getProjet.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:35:02.627768 2026] [:error] [pid 16768:tid 1432] [client ::1:52048] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getMatieres.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:35:03.889741 2026] [:error] [pid 16768:tid 1432] [client ::1:52048] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getMatieres.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:35:04.457915 2026] [:error] [pid 16768:tid 1432] [client ::1:52048] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getProjet.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:36:04.301260 2026] [:error] [pid 16768:tid 1432] [client ::1:52079] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getMatieres.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:36:04.788735 2026] [:error] [pid 16768:tid 1432] [client ::1:52079] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getProjet.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:36:18.591126 2026] [:error] [pid 16768:tid 1432] [client ::1:52089] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getModules.php on line 9, referer: http://localhost:5173/
+[Tue Mar 03 10:36:18.591126 2026] [:error] [pid 16768:tid 1432] [client ::1:52089] PHP Stack trace:, referer: http://localhost:5173/
+[Tue Mar 03 10:36:18.591126 2026] [:error] [pid 16768:tid 1432] [client ::1:52089] PHP   1. {main}() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getModules.php:0, referer: http://localhost:5173/
+[Tue Mar 03 10:36:18.591126 2026] [:error] [pid 16768:tid 1432] [client ::1:52089] PHP   2. mysqli->mysqli() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getModules.php:9, referer: http://localhost:5173/
+[Tue Mar 03 10:36:47.475872 2026] [:error] [pid 16768:tid 1432] [client ::1:52100] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php on line 9
+[Tue Mar 03 10:36:47.475872 2026] [:error] [pid 16768:tid 1432] [client ::1:52100] PHP Stack trace:
+[Tue Mar 03 10:36:47.475872 2026] [:error] [pid 16768:tid 1432] [client ::1:52100] PHP   1. {main}() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php:0
+[Tue Mar 03 10:36:47.475872 2026] [:error] [pid 16768:tid 1432] [client ::1:52100] PHP   2. mysqli->mysqli() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php:9
+[Tue Mar 03 10:41:20.088034 2026] [:error] [pid 16768:tid 1432] [client ::1:52247] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getProjet.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:41:30.764583 2026] [:error] [pid 16768:tid 1432] [client ::1:52260] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getProjet.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:43:09.613814 2026] [mpm_winnt:crit] [pid 16768:tid 644] AH02538: Child: Parent process exited abruptly. Child process is ending
+[Tue Mar 03 10:43:12.195113 2026] [ssl:warn] [pid 14548:tid 748] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:43:12.195113 2026] [ssl:warn] [pid 14548:tid 748] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:43:12.223116 2026] [core:warn] [pid 14548:tid 748] AH00098: pid file C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/bin/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Mar 03 10:43:12.273145 2026] [ssl:warn] [pid 14548:tid 748] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 03 10:43:12.274148 2026] [ssl:warn] [pid 14548:tid 748] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:43:12.274148 2026] [ssl:warn] [pid 14548:tid 748] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:43:12.297121 2026] [mpm_winnt:notice] [pid 14548:tid 748] AH00455: Apache/2.4.18 (Win32) OpenSSL/1.0.2f PHP/5.6.18 configured -- resuming normal operations
+[Tue Mar 03 10:43:12.297121 2026] [mpm_winnt:notice] [pid 14548:tid 748] AH00456: Server built: Jan 28 2016 09:58:25
+[Tue Mar 03 10:43:12.297121 2026] [core:notice] [pid 14548:tid 748] AH00094: Command line: 'C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\bin\\apache\\bin\\httpd.exe -d C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/bin/apache -f C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\bin\\apache\\conf\\httpd.conf'
+[Tue Mar 03 10:43:12.300127 2026] [mpm_winnt:notice] [pid 14548:tid 748] AH00418: Parent: Created child process 14492
+[Tue Mar 03 10:43:12.797682 2026] [ssl:warn] [pid 14492:tid 672] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:43:12.798677 2026] [ssl:warn] [pid 14492:tid 672] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:43:12.877681 2026] [ssl:warn] [pid 14492:tid 672] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 03 10:43:12.877681 2026] [ssl:warn] [pid 14492:tid 672] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:43:12.877681 2026] [ssl:warn] [pid 14492:tid 672] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:43:12.896682 2026] [mpm_winnt:notice] [pid 14492:tid 672] AH00354: Child: Starting 64 worker threads.
+[Tue Mar 03 10:43:20.723627 2026] [mpm_winnt:crit] [pid 14492:tid 672] AH02538: Child: Parent process exited abruptly. Child process is ending
+[Tue Mar 03 10:43:22.289084 2026] [ssl:warn] [pid 24404:tid 740] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:43:22.289084 2026] [ssl:warn] [pid 24404:tid 740] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:43:22.317068 2026] [core:warn] [pid 24404:tid 740] AH00098: pid file C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/bin/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Mar 03 10:43:22.367274 2026] [ssl:warn] [pid 24404:tid 740] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 03 10:43:22.368275 2026] [ssl:warn] [pid 24404:tid 740] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:43:22.368275 2026] [ssl:warn] [pid 24404:tid 740] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:43:22.387249 2026] [mpm_winnt:notice] [pid 24404:tid 740] AH00455: Apache/2.4.18 (Win32) OpenSSL/1.0.2f PHP/5.6.18 configured -- resuming normal operations
+[Tue Mar 03 10:43:22.387249 2026] [mpm_winnt:notice] [pid 24404:tid 740] AH00456: Server built: Jan 28 2016 09:58:25
+[Tue Mar 03 10:43:22.387249 2026] [core:notice] [pid 24404:tid 740] AH00094: Command line: 'C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\bin\\apache\\bin\\httpd.exe -d C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/bin/apache -f C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\bin\\apache\\conf\\httpd.conf'
+[Tue Mar 03 10:43:22.390242 2026] [mpm_winnt:notice] [pid 24404:tid 740] AH00418: Parent: Created child process 24256
+[Tue Mar 03 10:43:22.881291 2026] [ssl:warn] [pid 24256:tid 736] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:43:22.881291 2026] [ssl:warn] [pid 24256:tid 736] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:43:22.961291 2026] [ssl:warn] [pid 24256:tid 736] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 03 10:43:22.962324 2026] [ssl:warn] [pid 24256:tid 736] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:43:22.962324 2026] [ssl:warn] [pid 24256:tid 736] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:43:22.981299 2026] [mpm_winnt:notice] [pid 24256:tid 736] AH00354: Child: Starting 64 worker threads.
+[Tue Mar 03 10:43:53.155641 2026] [mpm_winnt:crit] [pid 24256:tid 736] AH02538: Child: Parent process exited abruptly. Child process is ending
+[Tue Mar 03 10:43:55.245657 2026] [ssl:warn] [pid 21920:tid 728] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:43:55.246660 2026] [ssl:warn] [pid 21920:tid 728] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:43:55.274636 2026] [core:warn] [pid 21920:tid 728] AH00098: pid file C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/bin/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Mar 03 10:43:55.327006 2026] [ssl:warn] [pid 21920:tid 728] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 03 10:43:55.328010 2026] [ssl:warn] [pid 21920:tid 728] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:43:55.328010 2026] [ssl:warn] [pid 21920:tid 728] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:43:55.346088 2026] [mpm_winnt:notice] [pid 21920:tid 728] AH00455: Apache/2.4.18 (Win32) OpenSSL/1.0.2f PHP/5.6.18 configured -- resuming normal operations
+[Tue Mar 03 10:43:55.346088 2026] [mpm_winnt:notice] [pid 21920:tid 728] AH00456: Server built: Jan 28 2016 09:58:25
+[Tue Mar 03 10:43:55.347087 2026] [core:notice] [pid 21920:tid 728] AH00094: Command line: 'C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\bin\\apache\\bin\\httpd.exe -d C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/bin/apache -f C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\bin\\apache\\conf\\httpd.conf'
+[Tue Mar 03 10:43:55.349088 2026] [mpm_winnt:notice] [pid 21920:tid 728] AH00418: Parent: Created child process 16236
+[Tue Mar 03 10:43:55.833466 2026] [ssl:warn] [pid 16236:tid 672] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:43:55.833466 2026] [ssl:warn] [pid 16236:tid 672] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:43:55.916588 2026] [ssl:warn] [pid 16236:tid 672] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 03 10:43:55.916588 2026] [ssl:warn] [pid 16236:tid 672] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:43:55.917583 2026] [ssl:warn] [pid 16236:tid 672] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:43:55.936581 2026] [mpm_winnt:notice] [pid 16236:tid 672] AH00354: Child: Starting 64 worker threads.
+[Tue Mar 03 10:44:30.432470 2026] [:error] [pid 16236:tid 1484] [client ::1:52450] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getProjet.php' not found or unable to stat, referer: http://localhost:5173/
+[Tue Mar 03 10:46:45.597409 2026] [:error] [pid 16236:tid 1484] [client ::1:52570] script 'C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/www/portfolio/api/getProjet.php' not found or unable to stat
+[Tue Mar 03 10:48:47.087134 2026] [:error] [pid 16236:tid 1484] [client ::1:52622] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php on line 9, referer: http://localhost:5173/
+[Tue Mar 03 10:48:47.087134 2026] [:error] [pid 16236:tid 1484] [client ::1:52622] PHP Stack trace:, referer: http://localhost:5173/
+[Tue Mar 03 10:48:47.087134 2026] [:error] [pid 16236:tid 1484] [client ::1:52622] PHP   1. {main}() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php:0, referer: http://localhost:5173/
+[Tue Mar 03 10:48:47.087134 2026] [:error] [pid 16236:tid 1484] [client ::1:52622] PHP   2. mysqli->mysqli() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php:9, referer: http://localhost:5173/
+[Tue Mar 03 10:48:52.586574 2026] [:error] [pid 16236:tid 1484] [client ::1:52632] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php on line 9, referer: http://localhost:5173/
+[Tue Mar 03 10:48:52.586574 2026] [:error] [pid 16236:tid 1484] [client ::1:52632] PHP Stack trace:, referer: http://localhost:5173/
+[Tue Mar 03 10:48:52.586574 2026] [:error] [pid 16236:tid 1484] [client ::1:52632] PHP   1. {main}() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php:0, referer: http://localhost:5173/
+[Tue Mar 03 10:48:52.586574 2026] [:error] [pid 16236:tid 1484] [client ::1:52632] PHP   2. mysqli->mysqli() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php:9, referer: http://localhost:5173/
+[Tue Mar 03 10:50:03.336820 2026] [:error] [pid 16236:tid 1484] [client ::1:52671] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getModules.php on line 9, referer: http://localhost:5173/
+[Tue Mar 03 10:50:03.336820 2026] [:error] [pid 16236:tid 1484] [client ::1:52671] PHP Stack trace:, referer: http://localhost:5173/
+[Tue Mar 03 10:50:03.336820 2026] [:error] [pid 16236:tid 1484] [client ::1:52671] PHP   1. {main}() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getModules.php:0, referer: http://localhost:5173/
+[Tue Mar 03 10:50:03.336820 2026] [:error] [pid 16236:tid 1484] [client ::1:52671] PHP   2. mysqli->mysqli() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getModules.php:9, referer: http://localhost:5173/
+[Tue Mar 03 10:51:46.330737 2026] [:error] [pid 16236:tid 1484] [client ::1:49463] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getTheorie.php on line 9, referer: http://localhost:5173/
+[Tue Mar 03 10:51:46.330737 2026] [:error] [pid 16236:tid 1484] [client ::1:49463] PHP Stack trace:, referer: http://localhost:5173/
+[Tue Mar 03 10:51:46.330737 2026] [:error] [pid 16236:tid 1484] [client ::1:49463] PHP   1. {main}() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getTheorie.php:0, referer: http://localhost:5173/
+[Tue Mar 03 10:51:46.330737 2026] [:error] [pid 16236:tid 1484] [client ::1:49463] PHP   2. mysqli->mysqli() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getTheorie.php:9, referer: http://localhost:5173/
+[Tue Mar 03 10:51:47.983269 2026] [:error] [pid 16236:tid 1484] [client ::1:49463] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getTheorie.php on line 9, referer: http://localhost:5173/
+[Tue Mar 03 10:51:47.983269 2026] [:error] [pid 16236:tid 1484] [client ::1:49463] PHP Stack trace:, referer: http://localhost:5173/
+[Tue Mar 03 10:51:47.983269 2026] [:error] [pid 16236:tid 1484] [client ::1:49463] PHP   1. {main}() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getTheorie.php:0, referer: http://localhost:5173/
+[Tue Mar 03 10:51:47.983269 2026] [:error] [pid 16236:tid 1484] [client ::1:49463] PHP   2. mysqli->mysqli() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getTheorie.php:9, referer: http://localhost:5173/
+[Tue Mar 03 10:52:48.285279 2026] [:error] [pid 16236:tid 1484] [client ::1:49506] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php on line 9
+[Tue Mar 03 10:52:48.285279 2026] [:error] [pid 16236:tid 1484] [client ::1:49506] PHP Stack trace:
+[Tue Mar 03 10:52:48.285279 2026] [:error] [pid 16236:tid 1484] [client ::1:49506] PHP   1. {main}() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php:0
+[Tue Mar 03 10:52:48.285279 2026] [:error] [pid 16236:tid 1484] [client ::1:49506] PHP   2. mysqli->mysqli() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php:9
+[Tue Mar 03 10:53:18.514310 2026] [:error] [pid 16236:tid 1484] [client ::1:49508] PHP Warning:  mysqli::mysqli(): (HY000/1049): Unknown database 'portfolio' in C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php on line 9
+[Tue Mar 03 10:53:18.514310 2026] [:error] [pid 16236:tid 1484] [client ::1:49508] PHP Stack trace:
+[Tue Mar 03 10:53:18.514310 2026] [:error] [pid 16236:tid 1484] [client ::1:49508] PHP   1. {main}() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php:0
+[Tue Mar 03 10:53:18.514310 2026] [:error] [pid 16236:tid 1484] [client ::1:49508] PHP   2. mysqli->mysqli() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php:9
+[Tue Mar 03 10:57:31.244617 2026] [:error] [pid 16236:tid 1484] [client ::1:49768] PHP Notice:  Trying to get property of non-object in C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php on line 20, referer: http://localhost:5173/
+[Tue Mar 03 10:57:31.244617 2026] [:error] [pid 16236:tid 1484] [client ::1:49768] PHP Stack trace:, referer: http://localhost:5173/
+[Tue Mar 03 10:57:31.244617 2026] [:error] [pid 16236:tid 1484] [client ::1:49768] PHP   1. {main}() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php:0, referer: http://localhost:5173/
+[Tue Mar 03 10:57:41.422032 2026] [:error] [pid 16236:tid 1484] [client ::1:49777] PHP Notice:  Trying to get property of non-object in C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php on line 20
+[Tue Mar 03 10:57:41.422032 2026] [:error] [pid 16236:tid 1484] [client ::1:49777] PHP Stack trace:
+[Tue Mar 03 10:57:41.422032 2026] [:error] [pid 16236:tid 1484] [client ::1:49777] PHP   1. {main}() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php:0
+[Tue Mar 03 10:58:45.593943 2026] [:error] [pid 16236:tid 1428] [client ::1:49857] PHP Notice:  Trying to get property of non-object in C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php on line 20
+[Tue Mar 03 10:58:45.593943 2026] [:error] [pid 16236:tid 1428] [client ::1:49857] PHP Stack trace:
+[Tue Mar 03 10:58:45.593943 2026] [:error] [pid 16236:tid 1428] [client ::1:49857] PHP   1. {main}() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php:0
+[Tue Mar 03 10:59:01.828765 2026] [:error] [pid 16236:tid 1428] [client ::1:49859] PHP Notice:  Trying to get property of non-object in C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php on line 20
+[Tue Mar 03 10:59:01.828765 2026] [:error] [pid 16236:tid 1428] [client ::1:49859] PHP Stack trace:
+[Tue Mar 03 10:59:01.828765 2026] [:error] [pid 16236:tid 1428] [client ::1:49859] PHP   1. {main}() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php:0
