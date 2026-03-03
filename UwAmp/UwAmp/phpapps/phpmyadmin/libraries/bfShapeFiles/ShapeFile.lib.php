@@ -418,18 +418,18 @@ function swap($binValue) {
       $this->_saveDBFData();
     }
 
-    function updateDBFInfo($header) {
+    function updateDBFInfo($header): void {
       $tmp = $this->DBFData;
       unset($this->DBFData);
       $this->DBFData = array();
-      reset($header);
-      while (list($key, $value) = each($header)) {
+      reset(array: $header);
+      while (list($key, $value) = each(array: $header)) {
         $this->DBFData[$value[0]] = (isset($tmp[$value[0]])) ? $tmp[$value[0]] : "";
       }
     }
 
     function _loadHeaders() {
-      $this->recordNumber = loadData("N", fread($this->SHPFile, 4));
+      $this->recordNumber = loadData(type: "N", data: fread(stream: $this->SHPFile, 4));
       $tmp = loadData("N", fread($this->SHPFile, 4)); //We read the length of the record
       $this->shapeType = loadData("V", fread($this->SHPFile, 4));
     }
