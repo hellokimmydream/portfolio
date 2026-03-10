@@ -1309,3 +1309,61 @@ Version: '5.7.11'  socket: ''  port: 3306  MySQL Community Server (GPL)
 2026-03-03T10:17:14.254324Z 0 [Note] Event Scheduler: Loaded 0 events
 2026-03-03T10:17:14.255324Z 0 [Note] C:\Users\pr53sjy\Documents\GitHub\portfolio\UwAmp\UwAmp\bin\database\mysql-5.7.11\bin\mysqld.exe: ready for connections.
 Version: '5.7.11'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2026-03-03T10:25:47.757708Z 0 [Note] C:\Users\pr53sjy\Documents\GitHub\portfolio\UwAmp\UwAmp\bin\database\mysql-5.7.11\bin\mysqld.exe: Normal shutdown
+
+2026-03-03T10:25:47.757708Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2026-03-03T10:25:47.758715Z 0 [Note] Shutting down slave threads
+2026-03-03T10:25:47.758715Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2026-03-03T10:25:47.758715Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2026-03-03T10:25:47.759713Z 0 [Note] Binlog end
+2026-03-03T10:25:47.760750Z 0 [Note] Shutting down plugin 'ngram'
+2026-03-03T10:25:47.761151Z 0 [Note] Shutting down plugin 'partition'
+2026-03-03T10:25:47.761390Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2026-03-03T10:25:47.761390Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2026-03-03T10:25:47.761390Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2026-03-03T10:25:47.761390Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2026-03-03T10:25:47.762392Z 0 [Note] Shutting down plugin 'MyISAM'
+2026-03-03T10:25:47.762392Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2026-03-03T10:25:47.762392Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2026-03-03T10:25:47.762392Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2026-03-03T10:25:47.763424Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2026-03-03T10:25:47.763424Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2026-03-03T10:25:47.763424Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2026-03-03T10:25:47.763424Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2026-03-03T10:25:47.764398Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2026-03-03T10:25:47.764398Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2026-03-03T10:25:47.764398Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2026-03-03T10:25:47.765392Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2026-03-03T10:25:47.765392Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2026-03-03T10:25:47.765392Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2026-03-03T10:25:47.765392Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2026-03-03T10:25:47.766433Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2026-03-03T10:25:47.766433Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2026-03-03T10:25:47.766433Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2026-03-03T10:25:47.767429Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2026-03-03T10:25:47.767429Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2026-03-03T10:25:47.767429Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2026-03-03T10:25:47.767429Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2026-03-03T10:25:47.768435Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2026-03-03T10:25:47.768435Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2026-03-03T10:25:47.768435Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2026-03-03T10:25:47.769392Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2026-03-03T10:25:47.769392Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2026-03-03T10:25:47.769392Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2026-03-03T10:25:47.769392Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2026-03-03T10:25:47.770432Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2026-03-03T10:25:47.770432Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2026-03-03T10:25:47.770432Z 0 [Note] Shutting down plugin 'InnoDB'
+2026-03-03T10:25:47.770432Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2026-03-03T10:25:47.771392Z 0 [Note] InnoDB: Starting shutdown...
+2026-03-03T10:25:47.878289Z 0 [Note] InnoDB: Dumping buffer pool(s) to C:\Users\pr53sjy\Documents\GitHub\portfolio\UwAmp\UwAmp\bin\database\mysql-5.7.11\data\ib_buffer_pool
+2026-03-03T10:25:47.884116Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 260303 11:25:47
+2026-03-03T10:25:49.162446Z 0 [Note] InnoDB: Shutdown completed; log sequence number 5608120
+2026-03-03T10:25:49.162844Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2026-03-03T10:25:49.162844Z 0 [Note] Shutting down plugin 'MEMORY'
+2026-03-03T10:25:49.162844Z 0 [Note] Shutting down plugin 'CSV'
+2026-03-03T10:25:49.163883Z 0 [Note] Shutting down plugin 'sha256_password'
+2026-03-03T10:25:49.163883Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2026-03-03T10:25:49.163883Z 0 [Note] Shutting down plugin 'binlog'
+2026-03-03T10:25:49.164871Z 0 [Note] C:\Users\pr53sjy\Documents\GitHub\portfolio\UwAmp\UwAmp\bin\database\mysql-5.7.11\bin\mysqld.exe: Shutdown complete
+

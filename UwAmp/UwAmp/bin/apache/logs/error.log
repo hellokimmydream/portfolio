@@ -1042,3 +1042,4 @@
 [Tue Mar 03 11:17:15.011327 2026] [ssl:warn] [pid 2628:tid 244] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
 [Tue Mar 03 11:17:15.011327 2026] [ssl:warn] [pid 2628:tid 244] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
 [Tue Mar 03 11:17:15.031321 2026] [mpm_winnt:notice] [pid 2628:tid 244] AH00354: Child: Starting 64 worker threads.
+[Tue Mar 03 11:25:47.685074 2026] [mpm_winnt:crit] [pid 2628:tid 244] AH02538: Child: Parent process exited abruptly. Child process is ending
