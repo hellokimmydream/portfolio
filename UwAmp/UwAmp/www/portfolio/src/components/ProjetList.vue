@@ -52,11 +52,6 @@
             <strong>Résultat :</strong>
             {{ projet.resultat }}
           </p>
-
-          <p>
-            <strong>Score :</strong>
-            {{ projet.pourcentage_resultat }} %
-          </p>
         </div>
       </li>
     </ul>
