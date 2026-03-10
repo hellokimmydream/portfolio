@@ -1,29 +1,35 @@
 <?php
-header('Content-Type: application/json');
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json");
+
 $host = "localhost";
-$db   = "portfolio_db";
+$dbname = "portfolio_db";
 $user = "root";
-$pass = "root";
+$password = "root";
 
-// Connexion
-$conn = new mysqli($host, $user, $pass, $db);
-if ($conn->connect_error) {
-    echo json_encode(["error" => "Connexion échouée: " . $conn->connect_error]);
-    exit();
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
+} catch(PDOException $e) {
+    echo json_encode(["error" => $e->getMessage()]);
+    exit;
 }
 
-// Requête pour récupérer les modules
-$sql = "SELECT module_id, nom_module, description_module, date_debut_module, date_fin_module, note_finale 
-        FROM modules 
-        ORDER BY date_debut_module DESC";
-$result = $conn->query($sql);
+$sql = "
+SELECT 
+    m.module_id,
+    m.nom_module,
+    m.description_module,
+    MIN(t.test_id) as date_debut_module,
+    MAX(t.test_id) as date_fin_module,
+    AVG(n.note) as note_finale
+FROM t_modules m
+LEFT JOIN t_notes_modules n ON n.test_id = m.module_id
+LEFT JOIN t_notes_modules t ON t.test_id = m.module_id
+GROUP BY m.module_id
+";
 
-$modules = [];
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $modules[] = $row;
-    }
-}
+$stmt = $pdo->query($sql);
+
+$modules = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 echo json_encode($modules);
-$conn->close();
