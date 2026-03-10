@@ -1,27 +1,43 @@
 <?php
-header('Content-Type: application/json');
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json");
+
 $host = "localhost";
-$db   = "portfolio_db";
+$dbname = "portfolio_db";
 $user = "root";
-$pass = "root";
+$password = "root";
 
-// Connexion à la base de données
-$conn = new mysqli($host, $user, $pass, $db);
-if ($conn->connect_error) {
-    echo json_encode(["error" => "Connexion échouée: " . $conn->connect_error]);
-    exit();
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
+} catch(PDOException $e) {
+    echo json_encode(["error" => $e->getMessage()]);
+    exit;
 }
 
-// Requête pour récupérer les projets
-$sql = "SELECT projet_id, nom_projet, description, date_debut, date_fin, technologies FROM projets ORDER BY date_debut DESC";
-$result = $conn->query($sql);
+$sql = "
+SELECT 
+    p.projet_id,
+    p.nom_projet,
+    p.description,
+    p.date_projet_debut,
+    p.date_fin_projet,
+    m.nom_module,
+    r.resultat,
+    r.pourcentage_resultat
 
-$projets = [];
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $projets[] = $row;
-    }
-}
+FROM t_projets p
+
+LEFT JOIN t_modules m 
+ON p.module_id = m.module_id
+
+LEFT JOIN t_resultats_projets r 
+ON p.projet_id = r.projet_id
+
+ORDER BY p.date_projet_debut DESC
+";
+
+$stmt = $pdo->query($sql);
+
+$projets = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 echo json_encode($projets);
-$conn->close();

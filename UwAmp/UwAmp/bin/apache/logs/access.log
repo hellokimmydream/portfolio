@@ -2862,3 +2862,9 @@
 ::1 - - [03/Mar/2026:10:58:45 +0100] "GET /portfolio/api/getProjets.php HTTP/1.1" 200 1085
 ::1 - - [03/Mar/2026:10:58:45 +0100] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 346
 ::1 - - [03/Mar/2026:10:59:01 +0100] "GET /portfolio/api/getProjets.php HTTP/1.1" 200 1085
+::1 - - [03/Mar/2026:11:17:48 +0100] "POST /mysql/index.php HTTP/1.1" 200 1551
+::1 - - [03/Mar/2026:11:19:37 +0100] "GET /mysql/sql.php?db=portfolio_db&token=3fb038455c6d609e17c3e24113b1fc96&goto=db_structure.php&table=t_tests&pos=0&ajax_request=true&ajax_page_request=true&_nocache=1772533177136624018 HTTP/1.1" 200 9412
+::1 - - [03/Mar/2026:11:19:37 +0100] "GET /mysql/index.php?ajax_request=1&recent_table=1&token=3fb038455c6d609e17c3e24113b1fc96&no_debug=true&_nocache=1772533177561435756 HTTP/1.1" 200 1540
+::1 - - [03/Mar/2026:11:19:54 +0100] "GET /mysql/sql.php?server=1&db=portfolio_db&table=t_projets&pos=0&token=3fb038455c6d609e17c3e24113b1fc96&ajax_request=true&ajax_page_request=true&_nocache=1772533194785263452 HTTP/1.1" 200 11540
+::1 - - [03/Mar/2026:11:19:55 +0100] "GET /mysql/index.php?ajax_request=1&recent_table=1&token=3fb038455c6d609e17c3e24113b1fc96&no_debug=true&_nocache=1772533195151503482 HTTP/1.1" 200 1541
+::1 - - [03/Mar/2026:11:19:55 +0100] "POST /mysql/navigation.php?ajax_request=1&token=3fb038455c6d609e17c3e24113b1fc96 HTTP/1.1" 200 3262
