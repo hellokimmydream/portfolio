@@ -1043,3 +1043,23 @@
 [Tue Mar 03 11:17:15.011327 2026] [ssl:warn] [pid 2628:tid 244] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
 [Tue Mar 03 11:17:15.031321 2026] [mpm_winnt:notice] [pid 2628:tid 244] AH00354: Child: Starting 64 worker threads.
 [Tue Mar 03 11:25:47.685074 2026] [mpm_winnt:crit] [pid 2628:tid 244] AH02538: Child: Parent process exited abruptly. Child process is ending
+[Tue Mar 10 08:04:39.196224 2026] [ssl:warn] [pid 7004:tid 768] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 10 08:04:39.196224 2026] [ssl:warn] [pid 7004:tid 768] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 10 08:04:39.224132 2026] [core:warn] [pid 7004:tid 768] AH00098: pid file C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/bin/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Mar 10 08:04:39.286117 2026] [ssl:warn] [pid 7004:tid 768] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 10 08:04:39.286117 2026] [ssl:warn] [pid 7004:tid 768] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 10 08:04:39.286117 2026] [ssl:warn] [pid 7004:tid 768] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 10 08:04:39.957781 2026] [mpm_winnt:notice] [pid 7004:tid 768] AH00455: Apache/2.4.18 (Win32) OpenSSL/1.0.2f PHP/5.6.18 configured -- resuming normal operations
+[Tue Mar 10 08:04:39.957781 2026] [mpm_winnt:notice] [pid 7004:tid 768] AH00456: Server built: Jan 28 2016 09:58:25
+[Tue Mar 10 08:04:39.957781 2026] [core:notice] [pid 7004:tid 768] AH00094: Command line: 'C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\bin\\apache\\bin\\httpd.exe -d C:/Users/pr53sjy/Documents/GitHub/portfolio/UwAmp/UwAmp/bin/apache -f C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\bin\\apache\\conf\\httpd.conf'
+[Tue Mar 10 08:04:39.965731 2026] [mpm_winnt:notice] [pid 7004:tid 768] AH00418: Parent: Created child process 15836
+[Tue Mar 10 08:04:40.451928 2026] [ssl:warn] [pid 15836:tid 232] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 10 08:04:40.451928 2026] [ssl:warn] [pid 15836:tid 232] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 10 08:04:40.542122 2026] [ssl:warn] [pid 15836:tid 232] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 10 08:04:40.542122 2026] [ssl:warn] [pid 15836:tid 232] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 10 08:04:40.542122 2026] [ssl:warn] [pid 15836:tid 232] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 10 08:04:40.562227 2026] [mpm_winnt:notice] [pid 15836:tid 232] AH00354: Child: Starting 64 worker threads.
+[Tue Mar 10 08:39:08.693705 2026] [:error] [pid 15836:tid 1432] [client ::1:54320] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php on line 10
+[Tue Mar 10 08:39:08.693705 2026] [:error] [pid 15836:tid 1432] [client ::1:54320] PHP Stack trace:
+[Tue Mar 10 08:39:08.693705 2026] [:error] [pid 15836:tid 1432] [client ::1:54320] PHP   1. {main}() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php:0
+[Tue Mar 10 08:39:08.693705 2026] [:error] [pid 15836:tid 1432] [client ::1:54320] PHP   2. mysqli->mysqli() C:\\Users\\pr53sjy\\Documents\\GitHub\\portfolio\\UwAmp\\UwAmp\\www\\portfolio\\api\\getProjets.php:10

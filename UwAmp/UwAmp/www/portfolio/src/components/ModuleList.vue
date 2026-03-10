@@ -24,17 +24,27 @@
 <script>
 export default {
   name: "ModuleList",
+
   data() {
     return {
       modules: [],
     };
   },
-  mounted() {
-    fetch("http://localhost/www/portfolio/api/getModules.php")
-      .then((res) => res.json())
-      .then((data) => (this.modules = data.map((m) => ({ ...m, open: false }))))
-      .catch((err) => console.error(err));
+
+  async mounted() {
+    try {
+      const res = await fetch("http://localhost/portfolio/api/getModules.php");
+      const data = await res.json();
+
+      this.modules = data.map((m) => ({
+        ...m,
+        open: false,
+      }));
+    } catch (error) {
+      console.error("Erreur API :", error);
+    }
   },
+
   methods: {
     toggleModule(mod) {
       mod.open = !mod.open;
